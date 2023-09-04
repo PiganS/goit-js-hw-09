@@ -1,10 +1,11 @@
 const refs = {
   bodyRef: document.querySelector('body'),
   btnStart: document.querySelector('button[data-start]'),
-  btnStop: document.querySelector('button[data-stop'),
+  btnStop: document.querySelector('button[data-stop]'),
 };
 refs.btnStart.addEventListener('click', onClickStart);
 let switcherId = null;
+refs.btnStop.disabled = true;
 
 function onClickStart() {
   switcherId = setInterval(() => {
@@ -12,11 +13,13 @@ function onClickStart() {
   }, 1000);
   refs.btnStop.addEventListener('click', onClickStop);
   refs.btnStart.disabled = true;
+  refs.btnStop.disabled = false;
 }
 
 function onClickStop() {
   clearInterval(switcherId);
   refs.btnStart.disabled = false;
+  refs.btnStop.disabled = true;
   refs.btnStop.removeEventListener('click', onClickStop);
 }
 

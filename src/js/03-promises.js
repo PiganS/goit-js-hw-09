@@ -38,4 +38,5 @@ function onSubmit(event) {
       .then(handlePromiseSuccess)
       .catch(handlePromiseFailure);
   }
+  form.reset();
 }

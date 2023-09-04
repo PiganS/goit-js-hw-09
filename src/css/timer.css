@@ -29,7 +29,7 @@
   color: #3e4853;
 }
 
-.button {
+/* .button {
   padding: 4px 10px;
   text-align: center;
   text-decoration: none;
@@ -43,22 +43,21 @@
   border: 1px solid #8fe8f8;
   border-radius: 10px;
   background-color: #b0b2b37a;
-}
+} */
 
-.button:hover {
+/* .button:hover {
   box-shadow: 5px 5px 10px #8fe8f8;
-}
+} */
 
-.input {
+/* .input {
   padding: 5px 10px;
   border-radius: 10px;
   border: 1px solid #8fe8f8;
   background-color: #b0b2b37a;
-}
+} */
 
-.input:hover {
+/* .input:hover {
   box-shadow: 5px 5px 10px #8fe8f8;
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
-}
-
+} */

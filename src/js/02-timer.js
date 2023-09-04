@@ -36,6 +36,7 @@ function onClickStartBtn() {
   if (timerId) {
     clearInterval(timerId);
   }
+  refs.input.disabled = true;
   refs.startBtn.disabled = true;
   const currentTime = Date.now();
   const chosenTime = new Date(refs.input.value).getTime();
@@ -45,8 +46,9 @@ function onClickStartBtn() {
     remainingTime -= 1000;
 
     if (remainingTime <= 0) {
-      clearInterval(intervalId);
+      clearInterval(timerId);
       remainingTime = 0;
+      refs.input.disabled = false;
     }
 
     const timeLeft = convertMs(remainingTime);
